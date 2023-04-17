@@ -5,4 +5,4 @@ let produto = {
     "quantidade" : 1,
     "preço" : 1614.00,
 }
-console.log(produto);
+console.log(produto);.
