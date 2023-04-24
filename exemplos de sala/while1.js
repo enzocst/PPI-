@@ -5,19 +5,21 @@
 //     i++; //3 - aatualização
 // }
 
-let docentes = ['Bruno','Erika','Glenda','Thayse','Luiz'];
+// let docentes = ['Bruno','Erika','Glenda','Thayse','Luiz'];
 
-let buscado = prompt('Digite um docente');
+// let buscado = prompt('Digite um docente');
 
-let i = 0;
-let achou = false;
-while(i < docentes.length && !achou){
-    if (buscado == docentes[i]) {
-        achou = true;
-    }
-    i++;
+// let i = 0;
+// let achou = false;
+// while(i < docentes.length && !achou){
+//     if (buscado.trim().toLowerCase() == docentes[i].toLowerCase()) {
+//         achou = true;
+//     }
+//     i++;
 
-}
-if (achou){
-    document.write(`Docente ${buscado} encontrado na posição ${--i}`)
-}
+// }
+// if (achou){
+//     document.write(`Docente ${buscado} encontrado na posição ${--i}`);
+// } else{
+//     document.write(`Docente não encontrado`);
+// }
