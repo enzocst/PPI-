@@ -58,7 +58,7 @@ console.log(verificarTrianguloRetangulo(17, 8, 12)); // false
 
 
 var notas = [];
-var somaNotas = 0; \
+var somaNotas = 0;
 var quantidade = 10;
 
 // Lendo as notas dos estudantes e calculando a soma das notas
