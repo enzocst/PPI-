@@ -11,4 +11,4 @@ function verificartranguloretangulo(a, b, c) {
 }
 
 console.log(verificartranguloretangulo(5, 4, 3)); 
-console.log(verificartranguoretangulo(17, 8, 12));
+console.log(verificartranguloretangulo(17, 8, 12));
