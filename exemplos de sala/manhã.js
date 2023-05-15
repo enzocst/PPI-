@@ -1,137 +1,109 @@
-// Definindo os produtos vendidos como objetos JSON
-const produto1 = {
-    nome: "Produto 1",
-    quantidade: 3,
-    preco: 10.99
+// Representação das vendas de dois produtos como objetos JSON
+var venda1 = {
+    nome: "Geladeira",
+    quantidade: 1,
+    preco: 1237.98
 };
 
-const produto2 = {
-    nome: "Produto 2",
-    quantidade: 5,
-    preco: 7.5
+var venda2 = {
+    nome: "Televisão",
+    quantidade: 3,
+    preco: 899.00
 };
+
+// Função para calcular o preço total de uma venda
+function calcularPrecoTotal(venda) {
+    return venda.quantidade * venda.preco;
+}
 
 // Imprimindo as informações dos produtos vendidos
-console.log("Produto 1:");
-console.log("Nome: " + produto1.nome);
-console.log("Quantidade: " + produto1.quantidade);
-console.log("Preço: R$ " + produto1.preco.toFixed(2));
-console.log("\nProduto 2:");
-console.log("Nome: " + produto2.nome);
-console.log("Quantidade: " + produto2.quantidade);
-console.log("Preço: R$ " + produto2.preco.toFixed(2));
+console.log("Venda 1:");
+console.log("Nome: " + venda1.nome);
+console.log("Quantidade: " + venda1.quantidade);
+console.log("Preço: R$" + venda1.preco.toFixed(2));
+
+console.log("\nVenda 2:");
+console.log("Nome: " + venda2.nome);
+console.log("Quantidade: " + venda2.quantidade);
+console.log("Preço: R$" + venda2.preco.toFixed(2));
 
 // Calculando o preço total das duas vendas
-const precoTotal = produto1.quantidade * produto1.preco + produto2.quantidade * produto2.preco;
+var precoTotal = calcularPrecoTotal(venda1) + calcularPrecoTotal(venda2);
+console.log("\nPreço total das duas vendas: R$" + precoTotal.toFixed(2));
 
-// Imprimindo o preço total das duas vendas
-console.log("\nPreço total das duas vendas: R$ " + precoTotal.toFixed(2));
- 
 //—----------------------------------------------------------------
 
 
-    function verificaTrianguloRetangulo(a, b, c) {
-        if (a <= 0 || b <= 0 || c <= 0) {
-            return false;
-        }
-
-        if (
-            a * a === b * b + c * c ||
-            b * b === a * a + c * c ||
-            c * c === a * a + b * b
-        ) {
-            return true;
-        } else {
-            return false;
-        }
+function verificarTrianguloRetangulo(a, b, c) {
+    // Verifica se os valores são maiores que zero
+    if (a <= 0 || b <= 0 || c <= 0) {
+        return false;
     }
 
-// Solicita os valores dos lados do triângulo ao usuário
-const ladoA = parseFloat(prompt("Digite o valor do lado A:"));
-const ladoB = parseFloat(prompt("Digite o valor do lado B:"));
-const ladoC = parseFloat(prompt("Digite o valor do lado C:"));
-
-// Verifica se os valores formam um triângulo retângulo
-const formaTrianguloRetangulo = verificaTrianguloRetangulo(ladoA, ladoB, ladoC);
-
-// Exibe o resultado
-if (formaTrianguloRetangulo) {
-    console.log("Os valores formam um triângulo retângulo.");
-} else {
-    console.log("Os valores não formam um triângulo retângulo.");
+    // Verifica a condição do triângulo retângulo
+    if (a * a === b * b + c * c || b * b === a * a + c * c || c * c === a * a + b * b) {
+        return true;
+    } else {
+        return false;
+    }
 }
+
+// Exemplos de uso da função
+console.log(verificarTrianguloRetangulo(5, 4, 3)); // true
+console.log(verificarTrianguloRetangulo(17, 8, 12)); // false
+
 
 
 //—---------------------------------------------------
 
 
-// Array para armazenar as notas dos estudantes
-const notas = [];
+var notas = [];
+var somaNotas = 0; \
+var quantidade = 10;
 
-
-// Variável para armazenar a soma das notas
-let somaNotas = 0;
-
-
-// Loop para ler as notas dos 10 estudantes
-for (let i = 1; i <= 10; i++) {
-    const nota = parseFloat(prompt(`Digite a nota do estudante ${i}:`));
+// Lendo as notas dos estudantes e calculando a soma das notas
+for (var i = 1; i <= quantidade; i++) {
+    var nota = parseFloat(prompt("Digite a nota do estudante " + i + ":"));
     notas.push(nota);
     somaNotas += nota;
 }
 
+// Calculando a média aritmética da turma
+var mediaTurma = somaNotas / quantidade;
 
-// Calcula a média aritmética da turma
-const mediaTurma = somaNotas / notas.length;
-
-
-// Conta a quantidade de notas que ficaram na média ou acima dela
-let notasAcimaMedia = 0;
-for (let i = 0; i < notas.length; i++) {
+// Contando quantas notas ficaram na média ou acima dela
+var notasAcimaOuNaMedia = 0;
+for (var i = 0; i < quantidade; i++) {
     if (notas[i] >= mediaTurma) {
-        notasAcimaMedia++;
+        notasAcimaOuNaMedia++;
     }
 }
 
+// Imprimindo os resultados
+console.log("Média aritmética da turma: " + mediaTurma.toFixed(2));
+console.log("Quantidade de notas acima ou na média: " + notasAcimaOuNaMedia);
 
-// Exibe os resultados
-console.log("Média da turma:", mediaTurma.toFixed(2));
-console.log("Notas acima da média:", notasAcimaMedia);
 
 
 //—---------------------------------------------------------------
 
 
-    function getDataPorExtenso(data) {
-        // Divide a data em dia, mês e ano
-        const partesData = data.split('/');
-        const dia = parseInt(partesData[0]);
-        const mes = parseInt(partesData[1]);
-        const ano = parseInt(partesData[2]);
+function dataPorExtenso(data) {
+    var partes = data.split('/');
+    var dia = parseInt(partes[0]);
+    var mes = parseInt(partes[1]);
+    var ano = parseInt(partes[2]);
 
-        // Arrays com os nomes dos meses e dos números
-        const nomesMeses = [
-            'janeiro', 'fevereiro', 'março', 'abril',
-            'maio', 'junho', 'julho', 'agosto',
-            'setembro', 'outubro', 'novembro', 'dezembro'
-        ];
-        const numerosPorExtenso = [
-            '', 'um', 'dois', 'três', 'quatro', 'cinco', 'seis',
-            'sete', 'oito', 'nove', 'dez', 'onze', 'doze',
-            'treze', 'quatorze', 'quinze', 'dezesseis', 'dezessete',
-            'dezoito', 'dezenove', 'vinte', 'vinte e um',
-            'vinte e dois', 'vinte e três', 'vinte e quatro',
-            'vinte e cinco', 'vinte e seis', 'vinte e sete',
-            'vinte e oito', 'vinte e nove', 'trinta', 'trinta e um'
-        ];
+    var meses = [
+        "janeiro", "fevereiro", "março", "abril", "maio", "junho",
+        "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"
+    ];
 
-        // Monta a data por extenso
-        const dataPorExtenso = dia + ' de ' + nomesMeses[mes - 1] + ' de ' + ano;
-
-        return dataPorExtenso;
-    }
+    var dataExtenso = dia + " de " + meses[mes - 1] + " de " + ano;
+    return dataExtenso;
+}
 
 // Exemplo de uso da função
-const data = prompt('Digite uma data no formato dd/mm/aaaa:');
-const dataPorExtenso = getDataPorExtenso(data);
-console.log('Data por extenso:', dataPorExtenso);
+var data = prompt("Digite uma data no formato dd/mm/aaaa:");
+var dataExtenso = dataPorExtenso(data);
+console.log(dataExtenso);
