@@ -1,3 +1,6 @@
+//for (inicialização; condição; expressão final) {
+    // bloco de código a ser executado
+//}
 // let soma = 0;
 // for(let par = 2; par <= 100; par +=2){
 //     soma += par;
