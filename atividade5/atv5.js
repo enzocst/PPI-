@@ -1,5 +1,4 @@
 function principal() {
-    // Gera um número aleatório entre 1 e 20
     return Math.floor(Math.random() * 20) + 1;
   }
 
