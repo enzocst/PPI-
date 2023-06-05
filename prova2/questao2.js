@@ -1,6 +1,6 @@
-function textoseparado(nome) {
-    nome = prompt("Digite a o texto");
-    let divisoes = nome.split('');
+function contartexto(texto) {
+    texto = prompt("Digite a o texto");
+    let contador = texto.split('');
 }
 
-console.log(textoseparado());
+console.log(contartexto());
