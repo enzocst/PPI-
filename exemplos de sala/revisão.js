@@ -1,27 +1,61 @@
-// function mostrar(BomDiaMundo){
-//     console.log(BomDiaMundo);
-// };
+function mostrar(BomDiaMundo) {
+    console.log(BomDiaMundo);
+};
 
-// mostrar("Bom dia mundo")
+mostrar("Bom dia mundo")
 
-// function retornar(numero){
-//     let valor = numero ** 3;
-//     return valor;
-// }
+// Número ao Cubo
 
-// console.log(retornar(5));
+function retornar(num) {
+    num = +prompt("Digite um valor");
+    let valor = num ** 3;
+    return valor;
+}
 
-// function temp(far){
-//     let celcius = far - 273;
-//     return celcius;
-// }
+console.log(retornar());
 
-// console.log(temp(300));
+// Conversão de Farenheit para Celcius
 
-// function calculararea(base, altura){
-//     let area = (base * altura) / 2;
-//     console.log(area);
-// }
+function temp(far) {
+    far = +prompt("Digite o valor em Farenheit");
+    let celcius = far - 273;
+    return celcius;
+}
 
-// calculararea(5,6);
+console.log(temp());
 
+//Calcular Area de um triangulo
+
+function calculararea(base, altura) {
+    base = +prompt("Digite a base do triangulo");
+    altura = +prompt("Digite a altura do triangulo");
+    let area = (base * altura) / 2;
+    return area;
+}
+
+console.log(calculararea());
+
+//Calcular Area de um Circulo
+
+function calcularareacirculo(raio) {
+    raio = +prompt("Digite o raio do circulo");
+    let area = Math.PI * raio ** 2;
+    let perimetro = raio * 2 * Math.PI;
+    return [area, perimetro];
+}
+
+console.log(calcularareacirculo());
+
+// Mostrar número invertido
+
+function inverterNumero(numero) {
+    numero = +prompt("Digite um número: ");
+    var numeroString = numero.toString(); // Converter o número para uma string
+    var arrayCaracteres = numeroString.split(''); // Dividir a string em um array de caracteres
+    var arrayInvertido = arrayCaracteres.reverse(); // Inverter a ordem dos caracteres no array
+    var numeroInvertido = arrayInvertido.join(''); // Unir os caracteres novamente em uma string
+
+    return parseInt(numeroInvertido); // Converter a string invertida de volta para um número
+}
+
+console.log(inverterNumero());
