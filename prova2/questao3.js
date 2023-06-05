@@ -1,11 +1,11 @@
-function numeroInt(n, m) {
+function numeroint(n, m) {
     n = prompt("Digite o primeiro número");
     m = prompt("Digite o segundo número");
-    if (n * m == n * n || m * m){
-        return("É multiplo")
+    if (n * m >= 1){
+        return true;
     } else{
-        return("Não é multiplo");
+        return false;
     }
 }
 
-console.log(numeroInt());
+console.log(numeroint());
