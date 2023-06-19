@@ -1,7 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var cachorro_1 = require("./cachorro");
-var osvaldo = new cachorro_1.Cachorro('osvaldo', cachorro_1.Raça.SALSICHA);
-var malu = new cachorro_1.Cachorro('malu', cachorro_1.Raça.SALSICHA);
+const cachorro_1 = require("./cachorro");
+let osvaldo = new cachorro_1.Cachorro('osvaldo', cachorro_1.Raça.SALSICHA);
+let malu = new cachorro_1.Cachorro('malu', cachorro_1.Raça.SALSICHA);
 console.log(osvaldo);
 console.log(malu);
+console.log(`Nome: ${osvaldo.obterNome}`);
+osvaldo.inserirIdade(50);
+console.log(osvaldo.obterIdade());
+osvaldo.inserirIdade(5);
+console.log(osvaldo.obterIdade());
+console.log(malu.latir(10));

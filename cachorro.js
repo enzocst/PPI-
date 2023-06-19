@@ -8,12 +8,37 @@ var Raça;
     Raça["SALSICHA"] = "Salsicha";
     Raça["GOLDEN"] = "Golden";
 })(Raça || (exports.Raça = Raça = {}));
-var Cachorro = /** @class */ (function () {
-    function Cachorro(nm, rc) {
+class Cachorro {
+    constructor(nm, rc) {
         this.nome = nm;
         this.raça = rc;
         this.idade = 0;
     }
-    return Cachorro;
-}());
+    latir(quant) {
+        let latido = '';
+        for (let i = 0; i < quant; i++) {
+            latido += 'Au';
+        }
+        return latido;
+    }
+    inserirNome(nm) {
+        this.nome = nm;
+    }
+    obterNome() {
+        return this.nome;
+    }
+    inserirIdade(id) {
+        if (id >= 0 && id <= 25)
+            this.idade = id;
+    }
+    obterIdade() {
+        return this.idade;
+    }
+    inserirRaca(rc) {
+        this.raça = rc;
+    }
+    obterRaça() {
+        return this.raça;
+    }
+}
 exports.Cachorro = Cachorro;
