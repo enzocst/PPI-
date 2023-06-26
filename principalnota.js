@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const nota_1 = require("./nota");
+let raissaPPI = new nota_1.Nota(10, 60, 54, 90);
+console.log(raissaPPI);
+raissaPPI.alterarBim2(65);
+console.log(raissaPPI);
+let carlosSOR = new nota_1.Nota(0, 30, 40, 78);
+console.log(`Nota B3 Carlos = ${carlosSOR.obterBim3()}`);
+console.log(`Média = ${carlosSOR.calcularMédiaParcial()}`);

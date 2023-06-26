@@ -11,7 +11,6 @@ var Raça;
 class Cachorro {
     constructor(nm, rc) {
         this.nome = nm;
-        this.raça = rc;
         this.idade = 0;
     }
     latir(quant) {

@@ -12,7 +12,6 @@ export class Cachorro {
 
     constructor(nm: string, rc: string){
         this.nome = nm;
-        this.raça = rc;
         this.idade = 0;
     }
 
