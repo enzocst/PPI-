@@ -1,10 +1,9 @@
 import { Nota } from "./nota";
 
-let raissaPPI = new Nota(10,60,54,90);
-console.log(raissaPPI);
-raissaPPI.alterarBim2(65);
-console.log(raissaPPI);
+let raissa = new Nota(10,60,54,90);
 
-let carlosSOR = new Nota(0, 30, 40, 78);
-console.log(`Nota B3 Carlos = ${carlosSOR.obterBim3()}`);
-console.log(`Média = ${carlosSOR.calcularMédiaParcial()}`);
+
+console.log(`MP Raíssa: ${raissa.calcularMédiaParcial()}`)
+console.log(`Situação Raissa: ${raissa.obterSituação()}`)
+console.log(`MF Raíssa: ${raissa.calcularMédiaFinal(90)}`)
+console.log(`Situação Raíssa: ${raissa.obterSituação()}`)
