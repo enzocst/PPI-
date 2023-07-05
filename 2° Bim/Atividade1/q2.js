@@ -2,33 +2,25 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Contato = void 0;
 class Contato {
-    constructor(nm, eml, tele) {
+    constructor(nm, email, tel) {
         this.alterarnome(nm);
-        this.alteraremail(eml);
-        this.alterartelefone(tele);
+        this.alteraremail(email);
+        this.alterartelefone(tel);
     }
-    alterarnome(n) {
-        this.nome;
-        return true;
-        return false;
+    alterarnome(nm) {
+        this.nome = nm;
     }
     obternome() {
         return this.nome;
     }
-    alteraremail(n) {
-        this.email;
-        return true;
-        return false;
+    alteraremail(email) {
+        this.email = email;
     }
     obteremail() {
         return this.email;
     }
-    alterartelefone(n) {
-        if (n >= 0 && n <= 100) {
-            this.telefone = n;
-            return true;
-        }
-        return false;
+    alterartelefone(tel) {
+        this.telefone = tel;
     }
     obtertelefone() {
         return this.telefone;

@@ -3,39 +3,28 @@ export class Contato {
     private email: string;
     private telefone: number;
 
-    constructor(nm: string, eml: string, tele: number) {
+    constructor(nm: string, email: string, tel: number) {
         this.alterarnome(nm);
-        this.alteraremail(eml);
-        this.alterartelefone(tele);
+        this.alteraremail(email);
+        this.alterartelefone(tel);
     }
-    alterarnome(n: string): boolean {
-
-        this.nome
-        return true;
-        return false;
+    alterarnome(nm: string) {
+        this.nome = nm;
     }
 
     obternome(): string {
         return this.nome;
     }
 
-    alteraremail(n: string): boolean {
-        this.email
-        return true;
-        return false;
-
+    alteraremail(email: string) {
+        this.email = email;
     }
     obteremail(): string {
         return this.email;
     }
 
-    alterartelefone(n: number): boolean {
-        if (n >= 0 && n <= 100) {
-            this.telefone = n;
-            return true;
-
-        }
-        return false;
+    alterartelefone(tel: number) {
+        this.telefone = tel;
     }
 
     obtertelefone(): number {
