@@ -113,7 +113,7 @@ export class Nota {
         if (mp < 60 && this.obterNotaAvaliaçãoFinal()) {
             mf = (mp + nav) / 2;
         }
-        if(mf >= 60) {
+        if (mf >= 60) {
             this.situacao = Situação.APROVADO;
         } else {
             this.situacao = Situação.REPROVADO;
@@ -122,7 +122,7 @@ export class Nota {
         return mf;
     }
 
-    obterSituação(): Situação{
+    obterSituação(): Situação {
         return this.situacao;
     }
 }
