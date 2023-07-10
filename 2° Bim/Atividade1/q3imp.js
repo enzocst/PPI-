@@ -1,12 +1,11 @@
-import { Televisao, ControleRemoto } from "./q3";
-
-let televisao = new Televisao();
-let controleRemoto = new ControleRemoto(televisao);
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const q3_1 = require("./q3");
+let televisao = new q3_1.Televisao();
+let controleRemoto = new q3_1.ControleRemoto(televisao);
 controleRemoto.aumentarVolume();
 console.log(controleRemoto.consultarVolume());
-
 controleRemoto.aumentarCanal();
 console.log(controleRemoto.consultarCanal());
-
 controleRemoto.trocarCanal(5);
 console.log(controleRemoto.consultarCanal());

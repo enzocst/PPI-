@@ -1,4 +1,4 @@
-
+import { Televisao,ControleRemoto } from "./q3";
 
 let televisao = new Televisao();
 let controleRemoto = new ControleRemoto(televisao);
