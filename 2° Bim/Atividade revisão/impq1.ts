@@ -10,7 +10,7 @@ elevador.subir();
 elevador.subir();
 
 elevador.abrirPorta();
-elevador.sair(2);
+elevador.sair(10);
 elevador.fecharPorta();
 
 console.log("Andar atual:", elevador.getAndarAtual()); 

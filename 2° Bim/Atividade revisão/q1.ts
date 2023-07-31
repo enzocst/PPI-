@@ -16,7 +16,7 @@ export class Elevador {
     entrar(numeroPessoas: number): void {
       if (this.portaAberta && this.quantidadePessoas + numeroPessoas <= this.capacidade) {
         this.quantidadePessoas += numeroPessoas;
-        this.portaAberta = false; // Fecha a porta após entrar
+        this.portaAberta = false;
       } else {
         console.log("Não é possível entrar no elevador.");
       }
@@ -25,7 +25,7 @@ export class Elevador {
     sair(numeroPessoas: number): void {
       if (this.portaAberta && this.quantidadePessoas - numeroPessoas >= 0) {
         this.quantidadePessoas -= numeroPessoas;
-        this.portaAberta = false; // Fecha a porta após sair
+        this.portaAberta = false;
       } else {
         console.log("Não é possível sair do elevador.");
       }
@@ -59,17 +59,14 @@ export class Elevador {
       this.portaAberta = false;
     }
   
-    // Método para obter o andar atual
     getAndarAtual(): number {
       return this.andarAtual;
     }
   
-    // Método para obter a quantidade de pessoas presentes no elevador
     getQuantidadePessoas(): number {
       return this.quantidadePessoas;
     }
   
-    // Método para verificar se a porta está aberta ou fechada
     isPortaAberta(): boolean {
       return this.portaAberta;
     }

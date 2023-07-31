@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const q3_1 = require("./q3");
+let produto1 = new q3_1.Produto(150, 60, "Camiseta");
+let produto2 = new q3_1.Produto(500, 150, "Calça Jeans");
+let produto3 = new q3_1.Produto(900, 150, "Tênis");
+let item1 = new q3_1.ItemPedido(produto1, 2);
+let item2 = new q3_1.ItemPedido(produto2, 1);
+let item3 = new q3_1.ItemPedido(produto3, 3);
+let pedido = new q3_1.Pedido();
+pedido.adicionar_item(item1);
+pedido.adicionar_item(item2);
+pedido.adicionar_item(item3);
+let total_pedido = pedido.obter_total();
+console.log(`Total do pedido: R$${total_pedido.toFixed(2)}`);
