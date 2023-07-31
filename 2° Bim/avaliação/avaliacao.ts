@@ -1,7 +1,7 @@
 export class Data {
-    private dia: number;
-    private mes: number;
-    private ano: number;
+    dia: number;
+    mes: number;
+    ano: number;
 
     constructor(dia: number, mes: number, ano: number) {
         this.dia = dia;
@@ -20,9 +20,9 @@ export class Data {
 }
 
 export class Voo {
-    private data: Data;
-    private numero: number;
-    private reservas: boolean;
+    data: Data;
+    numero: number;
+    reservas: boolean;
 
     constructor(data: Data, numero: number) {
         this.data = data;
