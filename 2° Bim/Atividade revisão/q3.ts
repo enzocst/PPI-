@@ -54,7 +54,7 @@ export class Pedido {
     obter_total(): number {
         let total = 0;
         for (const item of this.itens) {
-            total += item.getProduto().getPreco() * item.getQuantidade();
+            total += item.obterproduto().obterpreco() * item.obterquantidade();
         }
         return total;
     }
