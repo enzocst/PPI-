@@ -16,7 +16,7 @@ class Data {
 }
 exports.Data = Data;
 class Voo {
-    constructor(data, numero, reservas) {
+    constructor(data, numero) {
         this.data = data;
         this.numero = numero;
         this.reservas = false;

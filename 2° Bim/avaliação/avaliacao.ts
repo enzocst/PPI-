@@ -24,7 +24,7 @@ export class Voo {
     private numero: number;
     private reservas: boolean;
 
-    constructor(data: Data, numero: number, reservas: boolean) {
+    constructor(data: Data, numero: number) {
         this.data = data;
         this.numero = numero;
         this.reservas = false;
