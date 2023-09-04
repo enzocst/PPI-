@@ -3,21 +3,24 @@
 <form>
     <div>
         <label for="bim1">Bim 1</label>
-        <input type="number">
+        <input type="number" #b1>
     </div>
     <div>
         <label for="bim2">Bim 2</label>
-        <input type="number">
+        <input type="number" #b2>
     </div>
     <div>
         <label for="bim3">Bim 3</label>
-        <input type="number">
+        <input type="number" #b3>
     </div>
     <div>
         <label for="bim4">Bim 4</label>
-        <input type="number">
+        <input type="number" #b4>
     </div>
     <div>
-        <input type="button" value="calcular">
+        <input type="button" value="calcular" (click)="calcularMediaParcial(+b1.value, +b2.value, +b3.value, +b4.value)">
     </div>
 </form>
+<div>
+    <p>{{resultado}}</p>
+</div>
