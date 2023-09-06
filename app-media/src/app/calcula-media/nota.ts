@@ -113,7 +113,7 @@ export class Nota {
      * 
      * @return A média final do estudante (mp + nav) / 2;
     */
-    calcularMédiaFinal(nav: number | 
+    calcularMediaFinal(nav: number | 
                        undefined = undefined) {
         let mp = this.calcularMédiaParcial();
         let mf = mp; 

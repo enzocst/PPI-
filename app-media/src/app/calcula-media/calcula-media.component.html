@@ -3,24 +3,37 @@
 <form>
     <div>
         <label for="bim1">Bim 1</label>
-        <input type="number" #b1>
+        <input type="number" [value]="boletim.obterBim1()" #b1>
     </div>
     <div>
         <label for="bim2">Bim 2</label>
-        <input type="number" #b2>
+        <input type="number" [value]="boletim.obterBim2()" #b2>
     </div>
     <div>
         <label for="bim3">Bim 3</label>
-        <input type="number" #b3>
+        <input type="number" [value]="boletim.obterBim3()" #b3>
     </div>
     <div>
         <label for="bim4">Bim 4</label>
-        <input type="number" #b4>
+        <input type="number" [value]="boletim.obterBim4()" #b4>
     </div>
     <div>
-        <input type="button" value="calcular" (click)="calcularMediaParcial(+b1.value, +b2.value, +b3.value, +b4.value)">
+        <input type="button" value="calcular"
+            (click)="calcularMediaParcial(+b1.value, +b2.value, +b3.value, +b4.value)">
     </div>
 </form>
 <div>
     <p>{{resultado}}</p>
+</div>
+
+<div *ngIf="mediaParcial < 60 && resultado != ''">
+    <form>
+        <div>
+            <label for="naf">Avaliação final</label>
+            <input id="naf" type="number" #naf>
+        </div>
+        <div>
+            <input type="button" value="Calcular Media Final" (click)="calcularMediaFinal (+naf.value)">
+        </div>
+    </form>
 </div>
