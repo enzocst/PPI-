@@ -13,4 +13,9 @@ export class AdicionaContatoComponent {
     this.contatos = []
   }
 
+  adicionarNovo(nome: string, telefone: string, email: string, aniversario: string, tipo: string ) {
+    const c = new Contato(nome);
+    this.contatos.push(c);
+  }
+
 }

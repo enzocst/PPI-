@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AdicionaContatoComponent } from './adiciona-contato.component';
 
 describe('AdicionaContatoComponent', () => {
