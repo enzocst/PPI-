@@ -1,20 +1,21 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { AdicionaContatoComponent } from './adiciona-contato.component';
+import { Component } from '@angular/core';
+import { Agenda } from './agenda';
+import { Contato } from './contato';
 
-describe('AdicionaContatoComponent', () => {
-  let component: AdicionaContatoComponent;
-  let fixture: ComponentFixture<AdicionaContatoComponent>;
+@Component({
+  selector: 'app-adiciona-contato',
+  templateUrl: './adiciona-contato.component.html',
+  styleUrls: ['./adiciona-contato.component.css']
+})
+export class AdicionaContatoComponent {
+  agenda: Agenda;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [AdicionaContatoComponent]
-    });
-    fixture = TestBed.createComponent(AdicionaContatoComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  constructor(){
+    this.agenda = new Agenda();
+  }
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  adicionarNovo(nome: string, telefone: number, email: string, aniversario: string, tipo: string) {
+    const c = new Contato(nome, telefone, email, aniversario, tipo);
+    this.agenda.adicionar(c);
+  }
+}

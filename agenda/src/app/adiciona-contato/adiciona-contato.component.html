@@ -1,29 +1,57 @@
-<form action="">
-    <div>
-        <label for="">Nome:</label>
-        <input type="text" name="" id="">
-    </div>
-    <div>
-        <label>Telefone:</label>
-        <input type="number">
-    </div>
-    <div>
-        <label for="">Email:</label>
-        <input type="text">
-    </div>
-    <div>
-        <label>Aniversario:</label>
-        <input type="text">
-    </div>
-    <div>
-        <label for="">Tipo</label>
-        <input type="text" name="" id="">
-    </div>
-    <div>
-        <input type="button" value="Adicionar">
-    </div>
+<div class="container">
+    <div class="row">
+        <div class="col col-md-6 offset-md-3">
+            <h1 class="text-center">Agenda</h1>
 
-    <div ngClass="ObterLista()">
-        {{lista}}
+            <form>
+                <div>
+                    <label for="nome" class="form-label">Nome </label>
+                    <input id="nome" class="form-control" type="text" #nome>
+                </div>
+                <div>
+                    <label for="tel" class="form-label">Telefone </label>
+                    <input id="tel" class="form-control" type="number" #tel>
+                </div>
+                <div>
+                    <label for="email" class="form-label">Email </label>
+                    <input id="email" class="form-control" type="text" #email>
+                </div>
+                <div>
+                    <label for="niver" class="form-label">Aniversário </label>
+                    <input id="niver" class="form-control" type="text" #niver>
+                </div>
+                <div>
+                    <label for="tipo" class="form-label">Tipo </label>
+                    <input id="tipo" class="form-control" type="text" #tipo>
+                </div>
+                <div class="text-center">
+                    <button type="button"
+                        (click)="adicionarNovo(nome.value, +tel.value, email.value, niver.value, tipo.value)">Cadastrar</button>
+                </div>
+            </form>
+
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Telefone</th>
+                            <th>Email</th>
+                            <th>Aniversário</th>
+                            <th>Tipo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let c of agenda.obterTodos()">
+                            <td>{{c.nome}}</td>
+                            <td>{{c.telefone}}</td>
+                            <td>{{c.email}}</td>
+                            <td>{{c.aniversario}}</td>
+                            <td>{{c.tipo}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
-</form>
+</div>
