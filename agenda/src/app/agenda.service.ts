@@ -24,4 +24,4 @@ export class AgendaService {
     return this.contatos
   }
 }
-}
+

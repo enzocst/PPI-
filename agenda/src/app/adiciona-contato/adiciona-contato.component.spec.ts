@@ -14,7 +14,7 @@ export class AdicionaContatoComponent {
     this.agenda = new Agenda();
   }
 
-  adicionarNovo(nome: string, telefone: number, email: string, aniversario: string, tipo: string) {
+  adicionarNovo(nome: string, telefone: number, email: string, aniversario: string, tipo: string, fav: boolean) {
     const c = new Contato(nome, telefone, email, aniversario, tipo);
     this.agenda.adicionar(c);
   }
