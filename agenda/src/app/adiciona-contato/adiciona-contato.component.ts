@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Agenda } from './agenda';
+import { AgendaService } from '../agenda.service';
 import { Contato } from './contato';
 
 @Component({
@@ -8,10 +8,8 @@ import { Contato } from './contato';
   styleUrls: ['./adiciona-contato.component.css']
 })
 export class AdicionaContatoComponent {
-  agenda: Agenda;
 
-  constructor(){
-    this.agenda = new Agenda();
+  constructor(private agenda: AgendaService){
   }
 
   adicionarNovo(nome: string, telefone: number, email: string, aniversario: string, tipo: string) {

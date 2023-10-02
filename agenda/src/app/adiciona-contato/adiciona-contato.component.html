@@ -29,29 +29,6 @@
                         (click)="adicionarNovo(nome.value, +tel.value, email.value, niver.value, tipo.value)">Cadastrar</button>
                 </div>
             </form>
-
-            <div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Nome</th>
-                            <th>Telefone</th>
-                            <th>Email</th>
-                            <th>Aniversário</th>
-                            <th>Tipo</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let c of agenda.obterTodos()">
-                            <td>{{c.nome}}</td>
-                            <td>{{c.telefone}}</td>
-                            <td>{{c.email}}</td>
-                            <td>{{c.aniversario}}</td>
-                            <td>{{c.tipo}}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
         </div>
     </div>
 </div>

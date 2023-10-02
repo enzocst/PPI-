@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { AdicionaContatoComponent } from './adiciona-contato/adiciona-contato.component';
+import { ExibeContatosComponent } from './exibe-contatos/exibe-contatos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdicionaContatoComponent
+    AdicionaContatoComponent,
+    ExibeContatosComponent
   ],
   imports: [
     BrowserModule
