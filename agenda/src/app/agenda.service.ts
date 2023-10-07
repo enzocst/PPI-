@@ -7,9 +7,11 @@ import { Contato } from './adiciona-contato/contato';
 export class AgendaService {
 
   contatos: Contato[];
+  favoritos: Contato[];
 
   constructor() {
     this.contatos = []
+    this.favoritos = []
   }
 
   adicionar(novo: Contato): boolean {
@@ -22,6 +24,18 @@ export class AgendaService {
 
   obterTodos(): Contato[] {
     return this.contatos
+  }
+
+  adicionarfav(novofav: Contato): boolean {
+    if (!this.favoritos.includes(novofav)) {
+      this.favoritos.push(novofav)
+      return true
+    }
+    return false
+  }
+
+  obterTodosfav(): Contato[] {
+    return this.favoritos
   }
 }
 
