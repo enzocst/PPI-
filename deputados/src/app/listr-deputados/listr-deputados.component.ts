@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Deputado } from '../model/deputado';
 import { DeputadoService } from '../model/deputado.service';
 
 @Component({
@@ -7,9 +8,13 @@ import { DeputadoService } from '../model/deputado.service';
   styleUrls: ['./listr-deputados.component.css']
 })
 export class ListrDeputadosComponent {
+  deputados: Deputado[] = []
+
+
+
   constructor(private ds: DeputadoService) {
     this.ds.obterDeputados().subscribe(resposta => {
-      console.log(resposta)
+    this.deputados = resposta.dados
     })
   }
 }
