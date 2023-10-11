@@ -1,1 +1,8 @@
-<p>listr-deputados works!</p>
+<h1>Todos os Parlamentares</h1>
+
+<ul>
+    <li *ngFor="let dep of deputados">
+        <p> <img [src]="dep.urlFoto"></p>
+        <p>{{dep.nome}}</p>
+    </li>
+</ul>
