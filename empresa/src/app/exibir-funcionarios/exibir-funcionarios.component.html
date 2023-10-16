@@ -1,0 +1,19 @@
+<div>
+    <h3>Lista de funcionários</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Cargo</th>
+                <th>Salário</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of empresa.obterTodos()">
+                <td>{{c.obternome()}}</td>
+                <td>{{c.obtercargo()}}</td>
+                <td>{{c.obtersalario()}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

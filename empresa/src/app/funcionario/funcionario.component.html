@@ -1,14 +1,25 @@
-<form action="">
+<div>
     <div>
-        <label for="nome">Nome</label>
-        <input type="text" placeholder="digite seu nome">
+        <div>
+            <h1>Funcionários</h1>
+
+            <form>
+                <div>
+                    <label for="nome">Nome</label>
+                    <input id="nome" type="text" #nome>
+                </div>
+                <div>
+                    <label for="cargo">Cargo</label>
+                    <input id="cargo" type="text" #crg>
+                </div>
+                <div>
+                    <label for="salario">Salário</label>
+                    <input id="salario" type="number" #sal>
+                </div>
+                <div>
+                    <button type="button" (click)="adicionarfuncionario(nome.value, crg.value, +sal.value)">Adicionar Funcionário</button>
+                </div>
+            </form>
+        </div>
     </div>
-    <div>
-        <label for="cargo">Cargo</label>
-        <input type="text" placeholder="digite seu cargo">
-    </div>
-    <div>
-        <label for="salario">Salário</label>
-        <input type="number" placeholder="digite seu salário">
-    </div>
-</form>
+</div>
