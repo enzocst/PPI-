@@ -13,7 +13,8 @@ export class ListrDeputadosComponent {
 
 
   constructor(private ds: DeputadoService) {
-    this.ds.obterDeputados().subscribe(resposta => {
+    this.ds.obterDeputados().subscribe(
+      resposta => {
     this.deputados = resposta.dados
     })
   }
