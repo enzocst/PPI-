@@ -1,5 +1,9 @@
-<form action="">
-    <label for="">Buscar candidato </label>
-    <input type="text">
-    <button class="btn-primary">Buscar</button>
-</form>
+<div>
+    <h2>Pesquisar Deputados por Nome</h2>
+    <input  placeholder="Digite o nome do deputado" #nome>
+    <button (click)="buscarPorNome(nome.value)">Pesquisar</button>
+    <ul *ngIf="deputados && deputados.length > 0">
+      <li *ngFor="let deputado of deputados">{{ deputado.nome }}</li>
+    </ul>
+  </div>
+  

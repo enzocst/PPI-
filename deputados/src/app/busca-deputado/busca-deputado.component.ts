@@ -7,17 +7,15 @@ import { DeputadoService } from '../model/deputado.service';
   styleUrls: ['./busca-deputado.component.css']
 })
 export class BuscaDeputadoComponent {
+  deputados: any[] = [];
 
-
-  constructor(private ds: DeputadoService) {
-
-  }
+  constructor(private ds: DeputadoService) {}
 
   buscarPorNome(nome: string) {
     this.ds.obterDeputadoPorNome(nome).subscribe(
-      res => {
-
-      }
-    )
+      (res: any) => {
+        this.deputados = res.dados;
+      },
+    );
   }
 }
