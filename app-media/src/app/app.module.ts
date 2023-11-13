@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { CalculaMediaComponent } from './calcula-media/calcula-media.component';
+import { HttpClientModule} from '@angular/common/http';
+import { ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -11,6 +13,8 @@ import { CalculaMediaComponent } from './calcula-media/calcula-media.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

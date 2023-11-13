@@ -1,25 +1,25 @@
 <h1 class="text-center">Media parcial</h1>
 
-<form>
+<form [formGroup]="mediaForm">
     <div>
         <label for="bim1" class="form-label">Bim 1</label>
-        <input type="number" class="form-control" [value]="boletim.obterBim1()" #b1>
+        <input type="number" class="form-control" [value]="boletim.obterBim1()" formControlName="bim1">
     </div>
     <div>
         <label for="bim2" class="form-label">Bim 2</label>
-        <input type="number" class="form-control" [value]="boletim.obterBim2()" #b2>
+        <input type="number" class="form-control" [value]="boletim.obterBim2()" formControlName="bim2">
     </div>
     <div>
         <label for="bim3" class="form-label">Bim 3</label>
-        <input type="number" class="form-control" [value]="boletim.obterBim3()" #b3>
+        <input type="number" class="form-control" [value]="boletim.obterBim3()" formControlName="bim3">
     </div>
     <div>
         <label for="bim4" class="form-label">Bim 4</label>
-        <input type="number" class="form-control" [value]="boletim.obterBim4()" #b4>
+        <input type="number" class="form-control" [value]="boletim.obterBim4()" formControlName="bim4">
     </div>
     <div>
-        <input type="button" value="calcular"
-class = "btn btn-primary"(click)="calcularMediaParcial(+b1.value, +b2.value, +b3.value, +b4.value)">
+        <input type="button" value="calcular" [disabled]="mediaForm.invalid" class="btn btn-primary"
+            (click)="calcularMediaParcial()">
     </div>
 </form>
 <div [ngClass]="obterClasseSituacao()">
