@@ -19,3 +19,13 @@ app.get('/', (req, res) => {
 app.get('/produtos', (req, res) => {
     res.json(produtos)
 })
+
+app.get('/produtos/:id', (req, res) => {
+    const id = req.params.id
+    let prod = produtos.find(pr => pr.id == id)
+    if (prod) {
+        res.json(prod)
+    } else {
+        res.json({})
+    }
+})
