@@ -1,5 +1,7 @@
 const express = require('express')
+const cors = require('cors')
 const app = express()
+app.use(cors);
 const porta = 3000
 let produtos = [
     {id: 1, nome: 'Iphone', preço: 4999.99},
@@ -25,6 +27,16 @@ app.get('/produtos/:id', (req, res) => {
     let prod = produtos.find(pr => pr.id == id)
     if (prod) {
         res.json(prod)
+    } else {
+        res.json({})
+    }
+})
+
+app.get('/produtos/:id/preco', (req, res) => {
+    const id = req.params.id
+    let prod = produtos.find(pr => pr.id == id)
+    if (prod) {
+        res.json(prod.preco)
     } else {
         res.json({})
     }
