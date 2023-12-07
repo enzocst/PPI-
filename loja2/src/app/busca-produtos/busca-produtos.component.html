@@ -2,5 +2,5 @@
     <label for="">Digite o id do produto: </label>
     <input type="text" #id>
     <input type="button" value="buscar" (click) = "buscarIdProduto(+id.value)">
-    <p>{{this.prod}}</p>
+    <p *ngIf="this.prod.preco !== 0">{{this.prod}}</p>
 </form>
