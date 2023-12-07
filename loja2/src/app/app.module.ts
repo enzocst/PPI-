@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
+import { BuscaProdutosComponent } from './busca-produtos/busca-produtos.component';
 import { MostraProdutosComponent } from './mostra-produtos/mostra-produtos.component';
-import { BuscaProdutoComponent } from './busca-produto/busca-produto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MostraProdutosComponent,
-    BuscaProdutoComponent
+    BuscaProdutosComponent,
+    MostraProdutosComponent
   ],
   imports: [
     BrowserModule,

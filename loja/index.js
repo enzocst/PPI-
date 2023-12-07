@@ -1,12 +1,12 @@
 const express = require('express')
 const cors = require('cors')
 const app = express()
-app.use(cors);
+app.use(cors());
 const porta = 3000
 let produtos = [
-    {id: 1, nome: 'Iphone', preço: 4999.99},
-    {id: 2, nome: 'Geladeira Brastemp', preço: 2843.00},
-    {id: 3, nome: 'Notebook i5 16gb', preço: 3499.00}
+    {id: 1, nome: 'Iphone', preco: 4999.99},
+    {id: 2, nome: 'Geladeira Brastemp', preco: 2843.00},
+    {id: 3, nome: 'Notebook i5 16gb', preco: 3499.00}
 ]
 
 

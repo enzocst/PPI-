@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { Produto } from './produto';
@@ -19,6 +19,6 @@ export class LojaService {
   obterProdutosPeloId(id: number):
     Observable<Produto> {
     return this.http.get<Produto>(
-      `${this.URL}/produtos/${id}`)
+      `${this.URL}/produtos/${id}/preco`)
   }
 }
